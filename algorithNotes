@@ -1,0 +1,79 @@
+What is an Algorithm?
+an Algorithm is a set of well defined instructions to solve a problem.
+
+in real life we could say a recipe of a cake is an Algorithm. all those steps together will give you a way on how you can make a tasty cake.
+
+In programming: 
+an Algorithm to sum two number -
+a + b = result
+
+1. a and b are the inputs.
+2. add inputs using "+" operator
+
+those to steps will give you the result.
+
+How do we measure an Algorithm's effiency?
+
+Usually we use abolute running time to measure perfomance, but, for Algorithm's perfomance it's quite impossible to predict the abolute running time because it depends in several factors eg:
+
+    -programming language used to implement the Algorithm
+    -programs running at the same time
+    -OS quality
+    -The computer the program is running on.
+
+We evaluate and analyze the perfomance of an Algorithm in terms of input size:
+
+    Time complexity - Amount of time taken by an Algorithm to run, as a function of input size
+    Space complexity - Amount of memory taken by an Algorithm to run, as a function of input size
+
+    By evaluating against input size , the analysis is not only machine independent but the comparison is more appropiate.
+    
+    Keep in mind that there isnt one solution that works every single time so it's good to learn several ways of solving the same problem and use the best solution in your given constraits.
+
+    if your app needs to be very quick and has plenty of memory than there's  no need to worry aboutspace complexity.
+
+    other factors to analyze an algorithm: 
+        1.N/W - network connsuption if it is innternet based
+        2.Power
+        3.CPU Registers 
+
+How to represent complexity?
+
+we use Asymptotic notations:
+    1. Big-O Notation (O-Notation) - Worst case complexity
+    2. Omega Notation (Ω-Notation) - Best case complexity
+    3. Theta Notation (Θ-Notation) - Average case complexity
+
+What is the Big-O Notation?
+
+Big-O notation describes the complexity of an algorithm using algebraic terms.
+It has two important characteristics :
+    - It's expressed in terms of input
+    - It focuses on the bigger picture without getting caught up in the minute of details
+
+calculatinng Big-O time complexity:
+we calculate how many times the input is ran:
+here is an example:
+
+    //Algorithm to add every single natural number that comes below the n number including n.
+
+    const summation = (n) => {
+        let sum = 0; // runs 1
+        for (let i = 1; i <= n; i++) {
+            sum += i; // runs n times
+        }
+        return sum; // runs 1
+    };
+
+    /**   calculatinng time complexity of this algorithm 
+    * time complexity of this algorithm is n+2
+    */
+    
+Linear Time complexity
+O(n) - Linear: this means the bigger the n the bigger the time complexity.
+---------------------------------------------------------------------------
+Another example of the same algorithm but this time we use O(1) time complexity:
+    E.g.
+    const summationAlg2 = (n) => (n * (n + 1)) / 2;
+
+O(1) - constant time complexity : no matter how big the input is, it only runs once
